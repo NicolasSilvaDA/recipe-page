@@ -1,0 +1,154 @@
+:root {
+    /* Primary colors */
+    --primary-nutmeg: hsl(14, 45%, 36%);
+    --primary-dark-rasp: hsl(332, 51%, 32%); 
+
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    /* Text fonts */
+    --outfit: 'Outfit', 'sans-serif';
+    --young: 'Young Serif', 'arial';
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--eggshell);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 600px;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 16px;
+    border: none;
+    margin: 75px 0;
+}
+
+section {
+    margin: 40px;
+}
+
+.format-text {
+    font-family: var(--outfit);
+    font-size: 0.85em;
+    color: var(--wenge-brown);
+}
+
+h1 {
+    font-family: var(--young);
+    color: var(--dark-charcoal);
+    font-weight: 500;
+}
+
+h2 {
+    font-family: var(--young);
+    color: var(--primary-nutmeg);
+    font-weight: 400;
+}
+
+h3 {
+    font-family: var(--outfit);
+    color: var(--primary-dark-rasp);
+    padding: 0;
+    margin: 0;
+}
+
+.lists {
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+li {
+    padding: 5px 15px;
+    font-weight: 700px;
+}
+
+li::marker {
+    color: var(--primary-nutmeg);
+    font-weight: 700;
+}
+
+strong {
+    font-weight: 800;
+}
+
+img#recipe-food {
+    border-radius: 6px;
+    width: 100%;
+}
+
+div#preparation {
+    background-color: var(--rose-white);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+div#ingredients, div#instructions{
+    padding: 5px 0;
+    box-shadow: 0 1px var(--light-grey);
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+tr:last-child {
+    border: none;
+}
+
+th {
+    font-family: var(--outfit);
+    font-size: 0.85em;
+    font-weight: 400;
+    color: var(--wenge-brown);
+    padding: 10px 0 10px 20px;
+}
+
+td {
+    font-family: var(--outfit);
+    font-weight: 700;
+    font-size: 0.85em;
+    color: var(--primary-nutmeg);
+    padding: 10px 0 10px 20px;
+
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    section {
+        margin: 0;
+        padding-bottom: 30px;
+    }
+
+    img#recipe-food {
+        border-radius: 0;
+    }
+
+    div#recipe-info {
+        padding: 0 40px;
+    }
+}
